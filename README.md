@@ -1,11 +1,7 @@
 *Work in progress:*
 
-Live at: https://hugoio.github.io/JekyllFromScratch/
+## JekyllFromScratch
 
-## Jekyll from scratch
+Jekyll website hosted as a github project.
 
-Jekyll website describing how to write a website with Jekyll and to host it on Github.
-
-## Jekyll à partir de zéro
-
-Site Jekyll décrivant comment écrire un site avec Jekyll et l'héberger sur Github.
+https://hugoio.github.io/JekyllFromScratch/ renders `index.md` via Jekyll and Github Pages.
