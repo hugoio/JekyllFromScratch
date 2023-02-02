@@ -1,24 +1,17 @@
 ---
 layout: base
-title: index
+title: Jekyll notebook
 ---
-
-## Jekyll Notebook
-
-## Table of content
-
-- [Prerequisites](#1)
-- [Jekyll from scratch](#2)
 
 ### <a name="1"></a>Prerequisites
 
-This guide requires the following:
+This guide requires the following:  
 
 * [Jekyll](https://jekyllrb.com/docs/) installed on your workstation
 * An empty public github [project](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
 
-### <a name="2"></a>Jekyll from scratch
+### <a name="2"></a>From scratch
 
 1. Clone the empty public github project you made from `yourAccount` named `projectName` and change working directory:
 
