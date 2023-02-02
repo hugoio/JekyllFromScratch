@@ -3,36 +3,43 @@ layout: base
 title: Jekyll notebook
 ---
 
+&nbsp;  
+
 ### <a name="1"></a>Prerequisites
+
+&nbsp;  
 
 This guide requires the following:  
 
 * [Jekyll](https://jekyllrb.com/docs/) installed on your workstation
 * An empty public github [project](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
+&nbsp;  
 
-### <a name="2"></a>From scratch
+### <a name="2"></a>From scratch  
 
-1. Clone the empty public github project you made from `yourAccount` named `projectName` and change working directory:
+&nbsp;  
+
+1. Clone the empty public github project you made from __yourAccount__ named __projectName__ and change working directory:
 
 	```git clone https://github.com/yourAccount/projectName.git;```  
 	```cd projectName;```
 
-3. Initialize a new site using `bundle`:
+3. Initialize a new site using __bundle__:
 
 	```bundle init;```  
 	```echo "gem \"jekyll\"" >> Gemfile;```  
 	```bundle;```  
 
-4. Write an empty `_config.yml` file:
+4. Write an empty ___config.yml__ file:
 
 	```touch _config.yml```
 
-5. Make a `_layouts/` folder for site's layouts:
+5. Make a ___layouts/__ folder for site's layouts:
 
 	```mkdir _layouts;```
 
-6. Write `_layouts/base.html`:
+6. Write ___layouts/base.html__:
 
 	```html
 	<!DOCTYPE html>
@@ -45,7 +52,7 @@ This guide requires the following:
 	</html>
 	```
 
-7. Write `index.md`:
+7. Write __index.md__:
 
 	```yaml
 	---
@@ -65,6 +72,6 @@ This guide requires the following:
 	```git commit -m "new commit";```  
 	```git push origin main;```
 
-10. Update Github project settings ?
+10. Update Github project settings:
 
-	[?](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+	[Official documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
