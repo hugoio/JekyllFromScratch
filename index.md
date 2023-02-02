@@ -9,7 +9,7 @@ title: Jekyll notebook
 
 &nbsp;  
 
-This guide requires the following:  
+This notebook requires the following:  
 
 * [Jekyll](https://jekyllrb.com/docs/) installed on your workstation
 * An empty public github [project](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
@@ -46,9 +46,9 @@ This guide requires the following:
 	<html>
   	<head>
     	<meta charset="utf-8">
-    	<title>{{ page.title }}</title>
+    	<title>\{\{ page.title \}\}</title>
   	</head>
-  	<body>{{ content }}</body>
+  	<body>\{\{ content \}\}</body>
 	</html>
 	```
 
