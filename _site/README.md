@@ -1,5 +1,7 @@
-*Work in progress:*
+*Work in progress ...*
 
-## JekyllFromScratch
+## Jekyll notebook
 
-This project aims to share the instructions of how to write a Jekyll website and to host it as Github Pages; as a webpage; which you can vist at: https://hugoio.github.io/JekyllFromScratch/
+Github Pages site using Jekyll  
+https://hugoio.github.io/jekyll-notebook/  
+Single page website listing some of the instructions to write a similar project on Github using Jekyll.

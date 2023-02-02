@@ -30,7 +30,7 @@ This guide requires the following:
 
 5. Make a `_layouts/` folder for site's layouts:
 
-
+	```mkdir _layouts;```
 
 6. Write `_layouts/base.html`:
 

@@ -2,65 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>index</title>
-	<style>
-		body {
-			background: #222;
-			color: #eee;
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		#container {
-			width: 80%;
-		}
-		a {
-			color: #FF6eC7;
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			text-decoration: underline;
-			text-underline-offset: 10px;
-		}
-
-		p {
-			font-size: 1.2em;
-		}
-
-
-		.highlight {
-			font-weight: bold;
-			color: #4666ff;
-			border: solid 1px #4666ff;
-			border-radius: 5px;
-			padding: 5px;
-		}
-
-		.highlight pre {
-			border: none;
-		}
-
-		.highlighter-rouge {
-			color: #00ff41;
-		}
-	</style>
+    <title>Jekyll notebook</title>
+	<link rel="stylesheet" href="https://hugoio.github.io/jekyll-notebook/assets/css/styles.css">
   </head>
   <body>
 	  <div id="container">
-		  <h2 id="jekyll-notebook">Jekyll Notebook</h2>
-
-<h2 id="table-of-content">Table of content</h2>
-
-<ul>
-  <li><a href="#1">Prerequisites</a></li>
-  <li><a href="#2">Jekyll from scratch</a></li>
-</ul>
-
-<h3 id="prerequisites"><a name="1"></a>Prerequisites</h3>
+		  <h3 id="prerequisites"><a name="1"></a>Prerequisites</h3>
 
 <p>This guide requires the following:</p>
 
@@ -69,7 +16,7 @@
   <li>An empty public github <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">project</a></li>
 </ul>
 
-<h3 id="jekyll-from-scratch"><a name="2"></a>Jekyll from scratch</h3>
+<h3 id="from-scratch"><a name="2"></a>From scratch</h3>
 
 <ol>
   <li>
@@ -102,7 +49,7 @@
  <span class="nt">&lt;html&gt;</span>
   	<span class="nt">&lt;head&gt;</span>
  	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
- 	<span class="nt">&lt;title&gt;</span>index<span class="nt">&lt;/title&gt;</span>
+ 	<span class="nt">&lt;title&gt;</span>Jekyll notebook<span class="nt">&lt;/title&gt;</span>
   	<span class="nt">&lt;/head&gt;</span>
   	<span class="nt">&lt;body&gt;&lt;/body&gt;</span>
  <span class="nt">&lt;/html&gt;</span>
@@ -118,9 +65,25 @@
  <span class="s">Hello World!</span>
 </code></pre></div>    </div>
   </li>
+  <li>
+    <p>Build site:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code></p>
+  </li>
+  <li>
+    <p>Push the files to the main branch:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">git add .</code><br />
+ <code class="language-plaintext highlighter-rouge">git commit -m "new commit";</code><br />
+ <code class="language-plaintext highlighter-rouge">git push origin main;</code></p>
+  </li>
+  <li>
+    <p>Update Github project settings ?</p>
+
+    <p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">?</a></p>
+  </li>
 </ol>
 
 	  </div>
   </body>
 </html>
-
