@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+	<style>
+		body {
+			background: #222;
+			color: #eee;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#container {
+			width: 80%;
+		}
+		a {
+			color: #FF6eC7;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			text-decoration: underline;
+			text-underline-offset: 10px;
+		}
+
+		p {
+			font-size: 1.2em;
+		}
+
+
+		.highlight {
+			font-weight: bold;
+			color: #4666ff;
+			border: solid 1px #4666ff;
+			border-radius: 5px;
+			padding: 5px;
+		}
+
+		.highlight pre {
+			border: none;
+		}
+
+		.highlighter-rouge {
+			color: #00ff41;
+		}
+	</style>
+  </head>
+  <body>
+	  <div id="container">
+		  <h2 id="my-jekyll-guide">My Jekyll Guide</h2>
+
+<h2 id="table-of-content">Table of content</h2>
+
+<ul>
+  <li><a href="#1">Jekyll from scratch</a>
+    <ul>
+      <li><a href="#1a">Quickstart</a></li>
+      <li><a href="#1b">Index page and base layout</a></li>
+    </ul>
+  </li>
+  <li><a href="#2">CLI commands</a>
+    <ul>
+      <li><a href="#2a">Jekyll</a></li>
+      <li><a href="#2b">Bundle</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="jekyll-from-scratch"><a name="1"></a>Jekyll from scratch</h3>
+
+<h4 id="quickstart"><a name="1a"></a>Quickstart</h4>
+
+<p>This post assume you previously installed ruby and Jekyll on your machine.</p>
+
+<ol>
+  <li>
+    <p>Initialize a new site:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>newP<span class="p">;</span>
+<span class="nb">cd </span>newP<span class="p">;</span>
+bundle init<span class="p">;</span>
+<span class="nb">echo</span> <span class="s2">"gem </span><span class="se">\"</span><span class="s2">jekyll</span><span class="se">\"</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> Gemfile<span class="p">;</span>
+bundle<span class="p">;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+
+    <p>You can prefix all jekyll commands listed in this tutorial with <code class="language-plaintext highlighter-rouge">bundle exec</code>, to use the project configuration.</p>
+
+    <p>You can run the jekyll local web server with <code class="language-plaintext highlighter-rouge">jekyll serve</code>, options:</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">--livereload</code>: force the browser to refresh with every change</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">--host</code> and <code class="language-plaintext highlighter-rouge">--port</code></p>
+      </li>
+    </ul>
+
+    <p>You can build the site with <code class="language-plaintext highlighter-rouge">jekyll build</code>.</p>
+
+    <p>This post assume you run the local web server will developing with the following command:</p>
+  </li>
+  <li>
+    <p>Run the local web server:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--livereload</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+  </li>
+</ol>
+
+<h4 id="index-page-and-base-layout"><a name="1b"></a>Index page and base layout</h4>
+
+<ol>
+  <li>
+    <p>Write a file named <code class="language-plaintext highlighter-rouge">index.html</code> with the following code:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Home<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+
+    <p>If you visit local server on a local browser, you should see this hello world index page.</p>
+
+    <p>Let’s wrap the index page content inside a layout.</p>
+  </li>
+  <li>
+    <p>Write a folder named <code class="language-plaintext highlighter-rouge">_layouts</code>:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>_layouts<span class="p">;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>
+    <p>Write a file named <code class="language-plaintext highlighter-rouge">_layouts/base.html</code> with the following code:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>index<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>
+    <p>Rename <code class="language-plaintext highlighter-rouge">index.html</code>:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>index.html index.md<span class="p">;</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>
+    <p>Replace <code class="language-plaintext highlighter-rouge">index.md</code> content:</p>
+
+    <blockquote>
+      <blockquote>
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">base</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Home</span>
+<span class="nn">---</span>
+<span class="c1"># Hello World</span>
+</code></pre></div>        </div>
+      </blockquote>
+    </blockquote>
+  </li>
+</ol>
+
+<h3 id="cli-commands"><a name="2"></a>CLI commands</h3>
+
+<h4 id="jekyll"><a name="2a"></a>Jekyll</h4>
+
+<ul>
+  <li>
+    <p>Jekyll development server <code class="language-plaintext highlighter-rouge">jekyll server</code></p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">--livereload</code>: force the browser to refresh with every change</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">--host</code> and <code class="language-plaintext highlighter-rouge">--port</code>: //</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Build static site <code class="language-plaintext highlighter-rouge">jekyll build</code></p>
+  </li>
+</ul>
+
+<h4 id="bundle"><a name="2b"></a>Bundle</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bundle</code></li>
+</ul>
+
+	  </div>
+  </body>
+</html>
+
