@@ -3,73 +3,75 @@ layout: base
 title: index
 ---
 
-## JekyllFromScratch
+## Jekyll Notebook
 
 ## Table of content
 
 - [Prerequisites](#1)
-- [Instructions](#2)
+- [Jekyll from scratch](#2)
 
 ### <a name="1"></a>Prerequisites
 
 This guide requires the following:
-* A github account
-* An empty public github project
-* Jekyll installed on your workstation
 
-### <a name="2"></a>Instructions
+* [Jekyll](https://jekyllrb.com/docs/) installed on your workstation
+* An empty public github [project](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
-1. Clone the empty public github project you made from `yourAccount` reffered as `projectName`:
 
-	>>	```bash
-	>>	git clone https://github.com/yourAccount/projectName.git
-	>>	```
+### <a name="2"></a>Jekyll from scratch
 
-2. Change working directory:
+1. Clone the empty public github project you made from `yourAccount` named `projectName` and change working directory:
 
-	>>	```bash
-	>>	cd projectName
-	>>	```
+	```git clone https://github.com/yourAccount/projectName.git;```  
+	```cd projectName;```
 
-3. Initialize a new site:
+3. Initialize a new site using `bundle`:
 
-	>>	```bash
-	>> bundle init;
-	>> echo "gem \"jekyll\"" >> Gemfile;
-	>> bundle;
-	>>	```
+	```bundle init;```  
+	```echo "gem \"jekyll\"" >> Gemfile;```  
+	```bundle;```  
 
-4. Write an empty config file:
+4. Write an empty `_config.yml` file:
 
-	>>	```bash
-	>> touch _config.yml
-	>>	```
+	```touch _config.yml```
 
-5. Make a `_layouts` folder for site's layouts:
+5. Make a `_layouts/` folder for site's layouts:
 
-	>>	```bash
-	>> mkdir _layouts;
-	>>	```
+
 
 6. Write `_layouts/base.html`:
 
-	>> ```html
-	>> <!DOCTYPE html>
-	>> <html>
-	>>   <head>
-	>>     <meta charset="utf-8">
-	>>     <title>{{ page.title }}</title>
-	>>   </head>
-	>>   <body>{{ content }}</body>
-	>> </html>
-	>> ```
+	```html
+	<!DOCTYPE html>
+	<html>
+  	<head>
+    	<meta charset="utf-8">
+    	<title>{{ page.title }}</title>
+  	</head>
+  	<body>{{ content }}</body>
+	</html>
+	```
 
 7. Write `index.md`:
 
-	>> ```yaml
-	>> ---
-	>> layout: base
-	>> title: index
-	>> ---
-	>> Hello World!
-	>> ```
+	```yaml
+	---
+	layout: base
+	title: index
+	---
+	Hello World!
+	```
+
+8. Build site:
+
+	```bundle exec jekyll build```
+
+9. Push the files to the main branch:
+
+	```git add .```  
+	```git commit -m "new commit";```  
+	```git push origin main;```
+
+10. Update Github project settings ?
+
+	[?](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
