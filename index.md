@@ -21,8 +21,8 @@ Your workstation must have:
 
 You also need:
 
-	* A [Github](https://github.com/) account
-	* An empty public github [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+* A [Github](https://github.com/) account
+* An empty public github [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
 &nbsp;  
 
@@ -38,7 +38,7 @@ The empty public github repository name will be reffered as __repoName__
 	``` git clone https://github.com/userName/repoName.git ```  
 	``` cd repoName ```
 
-2. Initialize a new site using __bundle__:
+2. Initialize a new Jekyll site using __bundle__:
 
 	```bundle init;```  
 	```echo "gem \"jekyll\"" >> Gemfile;```  
@@ -59,7 +59,7 @@ The empty public github repository name will be reffered as __repoName__
 	<html>
   	<head>
     	<meta charset="utf-8">
-    	<title>\{{ page.title \}}</title>
+    	<title>{% raw %}{{ page.title }}{% endraw %}</title>
 		<style>
 			body {
 				margin: 0px; padding: 0px;
@@ -71,7 +71,7 @@ The empty public github repository name will be reffered as __repoName__
 			}
 		</style>
   	</head>
-  	<body>\{{ content \}}</body>
+  	<body>{% raw %}{{ content }}{% endraw %}</body>
 	</html>
 	```
 
@@ -93,9 +93,11 @@ The empty public github repository name will be reffered as __repoName__
 
 8. Enable Github Pages:
 
-	Official [documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
 	- Go to the repository settings page on Github
 	- In the "Code and automation" section of the sidebar, click Pages.
 	- Under "Build and deployment", under "Branch", use the None or Branch drop-down menu and select "main" branch as a publishing source.
 	- Click Save
+
+	Official [documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+9. Voilà !
