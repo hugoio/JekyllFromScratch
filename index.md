@@ -93,6 +93,8 @@ The empty public github repository name will be reffered as __repoName__
 
 8. Enable Github Pages:
 
+	Official [documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
 	- Go to the repository settings page on Github
 	- In the "Code and automation" section of the sidebar, click Pages.
 	- Under "Build and deployment", under "Branch", use the None or Branch drop-down menu and select "main" branch as a publishing source.
